@@ -1,0 +1,25 @@
+{
+    "name": "Stalker",
+    "license": "BSD-3-Clause",
+    "type": "project",
+    "description": "Simple task tracker.",
+    "autoload": {
+        "psr-0": {}
+    },
+    "require": {
+        "php": ">=5.4",
+        "rocknroot/stray-fw": "~0.4",
+        "filp/whoops": "~1.0",
+        "maximebf/debugbar": "~1.9",
+        "psr/log": "~1.0",
+        "symfony/yaml": "~2.4",
+        "twig/twig": "~1.15"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "cp vendor/rocknroot/stray-fw/cli.php cli.php",
+            "cp vendor/rocknroot/stray-fw/index.php web/index.php"
+        ]
+    },
+    "minimum-stability": "beta"
+}
